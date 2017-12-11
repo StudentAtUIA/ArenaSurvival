@@ -53,10 +53,9 @@ public class PlayerCamera : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKey("space"))
         {
-            transform.position = target.position - offset * currentZoom;
-            transform.LookAt(target.position + Vector3.up * pitch);
+            transform.position = new Vector3(target.position.x, transform.position.y, target.position.z) - offset * currentZoom; // * currentZoom;
         }
 
     }
