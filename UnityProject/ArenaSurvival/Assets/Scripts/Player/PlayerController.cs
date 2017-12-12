@@ -18,12 +18,12 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(1))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 100, movementMask))
+            if (Physics.Raycast(ray, out hit, 100, movementMask) && hit.collider.name == "Terrain")
             {
                 Debug.Log("We hit " + hit.collider.name + " at " + hit.point);
                 motor.MoveToPoint(hit.point);

@@ -55,7 +55,9 @@ public class PlayerCamera : MonoBehaviour {
     {
         if (Input.GetKey("space"))
         {
-            transform.position = new Vector3(target.position.x, transform.position.y, target.position.z) - offset * currentZoom; // * currentZoom;
+            float camPosZ = target.position.z;
+            camPosZ -= (transform.position.y - minY) / (maxY - minY) * 2f + 1f;
+            transform.position = new Vector3(target.position.x, transform.position.y, camPosZ); // * currentZoom;
         }
 
     }
