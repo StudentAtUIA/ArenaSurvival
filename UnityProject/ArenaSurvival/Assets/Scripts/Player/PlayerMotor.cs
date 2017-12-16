@@ -7,7 +7,8 @@ using UnityEngine.AI;
 
 public class PlayerMotor : MonoBehaviour {
 
-    NavMeshAgent agent;
+    Transform target;   // Target to follow
+    NavMeshAgent agent; // Reference to our agent
 
 	// Use this for initialization
 	void Start () {
@@ -16,10 +17,41 @@ public class PlayerMotor : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
-	public void MoveToPoint (Vector3 point) {
+    void Update()
+    {
+        if (target != null)
+        {
+            agent.SetDestination(target.position);
+            FaceTarget();
+        }
+    }
 
+	public void MoveToPoint (Vector3 point)
+    {
         agent.SetDestination(point);
-		
 	}
+
+    // Code under is to add move to and follow interacted target
+    public void FollowTarget (Interactable newTarget)
+    {
+        agent.stoppingDistance = newTarget.radius * 0.8f;
+        agent.updateRotation = false;
+
+        target = newTarget.transform;
+    }
+    
+    public void StopFollowingTarget()
+    {
+        agent.stoppingDistance = 0f;
+        agent.updateRotation = true;
+
+        target = null;
+    }
+
+    void FaceTarget ()
+    {
+        Vector3 direction = (target.position - transform.position).normalized; // Direction towards target
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.z)); // Rotation to look @ target direcion
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f); //Smoothly rotate towards target
+    }
 }

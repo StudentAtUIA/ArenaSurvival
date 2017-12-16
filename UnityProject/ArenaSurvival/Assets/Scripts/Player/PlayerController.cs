@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour {
+
+    public Interactable focus;
 
     public LayerMask movementMask;
     
@@ -18,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1)) //Rigthclick to move
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -27,8 +31,54 @@ public class PlayerController : MonoBehaviour {
             {
                 Debug.Log("We hit " + hit.collider.name + " at " + hit.point);
                 motor.MoveToPoint(hit.point);
+
+                RemoveFocus();
             }
         }
 
-	}
+        if (Input.GetMouseButton(0)) //middlemouse to interact
+        {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+
+               Interactable interactable = hit.collider.GetComponent<Interactable>();
+                if (interactable != null)
+                {
+                    SetFocus(interactable);
+                }
+            }
+        }
+
+    }
+
+    void SetFocus (Interactable newFocus)
+    {
+        if(newFocus != focus)
+        {
+            if (focus != null)
+            {
+                focus.OnDefocused();
+            }
+                
+            focus = newFocus;
+            motor.FollowTarget(newFocus);
+        }
+        
+        newFocus.OnFocused(transform);
+        
+    }
+
+    void RemoveFocus ()
+    {
+        if (focus != null)
+        {
+            focus.OnDefocused();
+        }
+            
+        focus = null;
+        motor.StopFollowingTarget();
+    }
 }
