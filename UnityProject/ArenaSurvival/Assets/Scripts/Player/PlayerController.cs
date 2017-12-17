@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
+        
+
         if (Input.GetMouseButton(0)) //middlemouse to interact
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);

@@ -17,6 +17,7 @@ public class PlayerCamera : MonoBehaviour {
     public float scrollSpeed = 20f;
     public float minY = 20f;
     public float maxY = 120f;
+    //bool yIsPressed = false;
 
     void Update()
     {
@@ -64,10 +65,26 @@ public class PlayerCamera : MonoBehaviour {
             camPosZ -= (transform.position.y);
             transform.position = new Vector3(target.position.x, transform.position.y, camPosZ);
 
-            /*transform.position = target.position - offset * currentZoom;
-            transform.LookAt(target.position + Vector3.up * pitch);*/
-
         }
+
+      /*  if (Input.GetKeyDown("y") && yIsPressed == false)
+        {
+            yIsPressed = true;
+        }
+
+        while (yIsPressed == true)
+        {
+
+            float camPosZ = target.position.z;
+            camPosZ -= (transform.position.y);
+            transform.position = new Vector3(target.position.x, transform.position.y, camPosZ);
+
+            if (Input.GetKeyDown("y") && yIsPressed == true)
+            {
+                yIsPressed = false;
+            }
+        }*/
+
 
     }
 
