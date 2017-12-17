@@ -7,6 +7,7 @@ public class PlayerCamera : MonoBehaviour {
     public Transform target;
     public Vector3 offset;
     public float pitch = 2f;
+    public float scale = 2f;
     private float currentZoom = 10f; 
 
     public float panSpeed = 20f;
@@ -55,9 +56,17 @@ public class PlayerCamera : MonoBehaviour {
     {
         if (Input.GetKey("space"))
         {
+            /*  float camPosZ = target.position.z;
+              camPosZ -= (transform.position.y - minY) / (maxY - minY) * 2f + (scale * currentZoom);
+              transform.position = new Vector3(target.position.x, transform.position.y, camPosZ);*/
+
             float camPosZ = target.position.z;
-            camPosZ -= (transform.position.y - minY) / (maxY - minY) * 2f + 1f;
-            transform.position = new Vector3(target.position.x, transform.position.y, camPosZ); // * currentZoom;
+            camPosZ -= (transform.position.y);
+            transform.position = new Vector3(target.position.x, transform.position.y, camPosZ);
+
+            /*transform.position = target.position - offset * currentZoom;
+            transform.LookAt(target.position + Vector3.up * pitch);*/
+
         }
 
     }
