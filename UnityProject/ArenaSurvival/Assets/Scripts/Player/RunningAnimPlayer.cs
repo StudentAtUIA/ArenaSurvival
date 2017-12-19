@@ -7,11 +7,11 @@ public class RunningAnimPlayer : MonoBehaviour {
 
     Animator anim;
     NavMeshAgent agent;
-    Animation animStat;
+   // Animation animStat;
 
 
     private bool animRunning = false;
-    public float animSpeed = 0.25f;
+    // public float animSpeed = 0.25f;
 
 	void Start () {
         agent = GetComponent<NavMeshAgent>();

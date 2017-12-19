@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, 100, movementMask) && hit.collider.name == "Terrain")
             {
-                Debug.Log("We hit " + hit.collider.name + " at " + hit.point);
+               // Debug.Log("We hit " + hit.collider.name + " at " + hit.point);
                 motor.MoveToPoint(hit.point);
 
                 RemoveFocus();
