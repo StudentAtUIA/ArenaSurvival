@@ -211,6 +211,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+a32208c961fe7021239886c577bcf8a0 Assembly-CSharp.dll:.InGameMenu
 b1f0704fc1b542c80ecf3fa1bbf472a1 Assembly-CSharp.dll:UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController
 62229a3e4d53ca59bec192e89627ed52 Assembly-CSharp.dll:TMPro.Examples.CameraController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
@@ -233,6 +234,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.TextConsoleSimulator
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexShakeB
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenu
 afc52d27c3ec0bd47909e81bd45fbffa Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.VertexColorCycler
 020550babdb991365f61c5bffe1f4f52 Assembly-CSharp.dll:TMPro.Examples.TextMeshSpawner
@@ -240,5 +242,10 @@ afc52d27c3ec0bd47909e81bd45fbffa Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 af7666733efcc974926d7d470e1732a6 Assembly-CSharp.dll:TMPro.Examples.SkewTextExample
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenu
-a32208c961fe7021239886c577bcf8a0 Assembly-CSharp.dll:.InGameMenu
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CharacterCombat
+9a396cfe4685c9a4a0b7da474d078177 Assembly-CSharp.dll:.CharacterStats
+9a396cfe4685c9a4a0b7da474d078177 Assembly-CSharp.dll:.PlayerStats
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerManager
+5642deaf3c3d753ed9a75e2f04d0b53f Assembly-CSharp.dll:.ItemPickup
+04b0d698bcd3104ef4c36ff2160350c9 Assembly-CSharp.dll:.Item
+c45bd011f73118724d805a93665d9fb4 Assembly-CSharp.dll:.Inventory

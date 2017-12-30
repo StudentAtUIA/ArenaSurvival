@@ -46,6 +46,11 @@ public class Interactable : MonoBehaviour {
 
     void OnDrawGizmosSelected()
     {
+        if(interactionTransform == null )
+        {
+            interactionTransform = transform;
+        }
+
 
         Gizmos.color = new Color(1, 1, 0, 0.75F);
         Gizmos.DrawWireSphere(interactionTransform.position, radius);
