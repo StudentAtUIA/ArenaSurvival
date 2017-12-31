@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 [RequireComponent(typeof(PlayerMotor))]
@@ -21,6 +22,12 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
 		
         if (Input.GetMouseButton(1)) //Rigthclick to move
         {

@@ -225,13 +225,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EquipmentManager.cs" />
+    <Compile Include="Assets\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\CharacterCombat.cs" />
     <Compile Include="Assets\Scripts\Enemies\AggroToPlayer.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
     <Compile Include="Assets\Scripts\GUIs\InGameMenu.cs" />
     <Compile Include="Assets\Scripts\GUIs\InventoryButton.cs" />
+    <Compile Include="Assets\Scripts\GUIs\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\GUIs\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Items\Equipment.cs" />
     <Compile Include="Assets\Scripts\Items\Interactable.cs" />
     <Compile Include="Assets\Scripts\Items\Inventory.cs" />
     <Compile Include="Assets\Scripts\Items\Item.cs" />
