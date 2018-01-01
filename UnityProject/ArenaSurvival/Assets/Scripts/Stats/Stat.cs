@@ -9,9 +9,31 @@ public class Stat
     [SerializeField] //Makes it possible to change the private int in the unity inpsctor
     private int baseValue;
 
+    private List<int> modifiers = new List<int>();
+
     public int GetValue()
     {
-        return baseValue;
+
+        int finalValue = baseValue;
+        modifiers.ForEach(x => finalValue += x);
+
+        return finalValue;
+    }
+
+    public void AddModifier (int modifier)
+    {
+        if (modifier != 0)
+        {
+            modifiers.Add(modifier);
+        }
+    }
+
+    public void RemoveModifier (int modifer)
+    {
+        if (modifer != 0)
+        {
+            modifiers.Remove(modifer);
+        }
     }
 
 }

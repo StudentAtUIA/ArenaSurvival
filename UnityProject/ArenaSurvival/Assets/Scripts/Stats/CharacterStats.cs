@@ -10,12 +10,12 @@ public class CharacterStats : MonoBehaviour {
     public Stat damage;
     public Stat armor;
 
-    private void Awake()
+    void Awake()
     {
         currentHealth = maxHealth;
     }
 
-    private void Update()
+    void Update()
     {
         if(Input.GetKeyDown(KeyCode.T))
         {

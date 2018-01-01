@@ -225,17 +225,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EquipmentManager.cs" />
-    <Compile Include="Assets\InventorySlot.cs" />
-    <Compile Include="Assets\Scripts\CharacterCombat.cs" />
     <Compile Include="Assets\Scripts\Enemies\AggroToPlayer.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
     <Compile Include="Assets\Scripts\GUIs\InGameMenu.cs" />
     <Compile Include="Assets\Scripts\GUIs\InventoryButton.cs" />
+    <Compile Include="Assets\Scripts\GUIs\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\GUIs\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\GUIs\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Items\Equipment.cs" />
+    <Compile Include="Assets\Scripts\Items\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\Items\Interactable.cs" />
     <Compile Include="Assets\Scripts\Items\Inventory.cs" />
     <Compile Include="Assets\Scripts\Items\Item.cs" />
@@ -245,8 +244,10 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\Player\RunningAnimPlayer.cs" />
+    <Compile Include="Assets\Scripts\Stats\CharacterCombat.cs" />
     <Compile Include="Assets\Scripts\Stats\CharacterStats.cs" />
     <Compile Include="Assets\Scripts\Stats\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Stats\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\Stats\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Stats\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Stats\Stat.cs" />
